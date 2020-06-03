@@ -6,6 +6,9 @@
         </div>
         <wj-input v-model="formData.email" type="email" placeholder="Your Email" :required="true"></wj-input>
         <wj-input v-model="formData.password" type="password" placeholder="Password" :delay="1" :required="true"></wj-input>
+        <div class="wj-form__sub-action flex-end">
+            <router-link to="forgotpassword" class="link animate__animated animate__fadeIn animate__slow animate__delay-4s">Forgot Password?</router-link>
+        </div>
         <div class="wj-form__group wj-form__action wj-form__group--full-width animate__animated animate__fadeInUp animate__slow animate__delay-2s">
             <wj-btn :status="btnStatus" type="ascent">Sign In</wj-btn>
         </div>
@@ -53,5 +56,7 @@ export default {
 </script>
 
 <style>
-
+    .flex-end{
+        justify-content: flex-end !important;
+    }
 </style>

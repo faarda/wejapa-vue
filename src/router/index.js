@@ -13,6 +13,8 @@ import SingleJob from '../views/jobs/SingleJob.vue';
 import SavedJobs from '../views/jobs/SavedJobs.vue';
 import Applications from '../views/jobs/Applications.vue';
 import Profile from '../views/Profile.vue';
+import ForgotPassword from '../views/auth/ForgotPassword.vue';
+import ResetPassword from '../views/auth/ResetPassword.vue';
 
 Vue.use(VueRouter)
 
@@ -36,7 +38,24 @@ const routes = [{
         meta: {
           requiresGuest: true
         }
-      }
+      },
+      {
+        path: "forgotpassword",
+        component: ForgotPassword,
+        name: "forgotpass",
+        meta: {
+          requiresGuest: true
+        }
+      },
+      {
+        path: "resetpassword/:token",
+        component: ResetPassword,
+        name: "resetpass",
+        meta: {
+          requiresGuest: true
+        }
+      },
+
     ]
   },
   {
